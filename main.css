@@ -3,6 +3,7 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 nav{
     display: flex;
@@ -25,6 +26,7 @@ a{
 }
 
 .inbar{
+    position: relative;
     padding-top: 12px;
     padding-left: 10px;
     padding-right: 269px;
@@ -35,22 +37,61 @@ a{
     margin: auto;
 }
 
+.inbar::-webkit-input-placeholder{
+    font-size: 14px;
+}
+
+.search-icon{
+    color: whitesmoke;
+    width: 100px;
+    position: absolute;
+    left: 47%;
+    top: 4.65%;
+}
+
+.sbut{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s all;
+}
+
+.sbut:active {
+    transform: scale(0.7);
+}
+
 .logo{
     padding-left: 100px;
     padding-right: 100px;
+    transition: 0.2s all;
 }
-
+.logo:active{
+    transform: scale(0.9);
+}
 .cart{
     padding-left: 100px;
     padding-top: 10px;
+    transition: 0.2s all;
+}
+.cart:active{
+    transform: scale(0.9);
 }
 .login{
     padding-left: 100px;
     padding-top: 10px;
+    transition: 0.2s all;
+}
+.login:active{
+    transform: scale(0.9);
 }
 
-.text{
-    padding-left: 9px;
+.text1{
+    padding-left: 6px;
+    color: cornflowerblue;
+}
+.text2{
+    padding-left: 10px;
     color: cornflowerblue;
 }
 
@@ -67,7 +108,6 @@ a{
 
 .carousel{
     overflow-x: hidden;
-    margin: 2%;
 }
 
 .carousel figure{
@@ -81,6 +121,12 @@ a{
 .carousel figure img{
      width: 25%;
      float: left;
+     cursor: pointer;
+     transition: 0.2s all;
+}
+
+.carousel figure img:active{
+    transform: scale(0.98);
 }
 
 @keyframes slider {
@@ -132,11 +178,17 @@ a{
         display: none;
     }
     .inbar{
-        padding-right: 5px;
+        padding-right: 0px;
+    }
+    .inbar::-webkit-input-placeholder{
+        font-size: 12px;
     }
     .login,.cart{
         padding-left:60px;
         padding-top: 40px;
+    }
+    .sbut{
+        display: none;
     }
     .logo{
         padding-left: 10px;
@@ -145,6 +197,10 @@ a{
     .burger{
         display: block;
         cursor: pointer;
+        transition: 0.5s all;
+    }
+    .burger:active{
+        transform: scale(0.9);
     }
     .carousel figure img{
         height: 50%;
